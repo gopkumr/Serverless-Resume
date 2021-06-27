@@ -1,0 +1,58 @@
+@using ResumeApp.Core.Model;
+
+<div class="col-md-4 left-co">
+                    <div class="left-side">
+                        <div class="profile-info">
+                            <img src="assets/images/profile.jpg" alt="">
+                            <h3>@BasicInfo.name</h3>
+                            <span>@BasicInfo.label</span>
+                        </div>
+                        <h4 class="ltitle">Contact</h4>
+                        <div class="contact-box pb0">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="detail">
+                                @BasicInfo.phone
+                            </div>
+                        </div>
+                        <div class="contact-box pb0">
+                            <div class="icon">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <div class="detail">
+                                @BasicInfo.email
+                            </div>
+                        </div>
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail">
+                                @BasicInfo.location.city,@BasicInfo.location.countryCode
+                            </div>
+                        </div>
+                        <h4 class="ltitle">Contact</h4>
+                        <ul class="row social-link no-margin">
+                            <li><i class="fab fa-facebook-f"></i></li>
+                            <li><i class="fab fa-twitter"></i></li>
+                            <li><i class="fab fa-google-plus-g"></i></li>
+                            <li><i class="fab fa-linkedin-in"></i></li>
+                            <li><i class="fab fa-github"></i></li>
+                        </ul>
+                        <h4 class="ltitle">Hobbies</h4>
+                        <ul class="hoby row no-margin">
+                            @foreach (var hobby in BasicInfo.interests)
+                            {
+                                <li><i class="fas <i class="far fa-check-circle"></i><br> @hobby.name</li>
+                            }
+                        </ul>
+                    </div>
+</div>
+
+@code{
+
+[Parameter]
+public Basics BasicInfo  {get;set;}
+
+}
