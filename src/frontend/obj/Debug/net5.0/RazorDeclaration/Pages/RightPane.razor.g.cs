@@ -82,6 +82,13 @@ using frontend.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "D:\Projects\Azure\ResumeApp\src\frontend\Pages\RightPane.razor"
+using ResumeApp.Core.Model;
+
+#line default
+#line hidden
+#nullable disable
     public partial class RightPane : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -89,6 +96,17 @@ using frontend.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 59 "D:\Projects\Azure\ResumeApp\src\frontend\Pages\RightPane.razor"
+ 
+    [Parameter]
+    public Resume ResumeInfo{get;set;}
+
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

@@ -3,7 +3,7 @@
 <div class="col-md-4 left-co">
                     <div class="left-side">
                         <div class="profile-info">
-                            <img src="assets/images/profile.jpg" alt="">
+                            <img src="@BasicInfo.image" alt="">
                             <h3>@BasicInfo.name</h3>
                             <span>@BasicInfo.label</span>
                         </div>
@@ -34,17 +34,18 @@
                         </div>
                         <h4 class="ltitle">Contact</h4>
                         <ul class="row social-link no-margin">
-                            <li><i class="fab fa-facebook-f"></i></li>
-                            <li><i class="fab fa-twitter"></i></li>
-                            <li><i class="fab fa-google-plus-g"></i></li>
-                            <li><i class="fab fa-linkedin-in"></i></li>
-                            <li><i class="fab fa-github"></i></li>
+                            @foreach (var profile in BasicInfo.profiles)
+                            {
+                                <li><a href="@profile.url"><i class="@profile.icon"></i></a></li>
+                            }
                         </ul>
                         <h4 class="ltitle">Hobbies</h4>
                         <ul class="hoby row no-margin">
-                            @foreach (var hobby in BasicInfo.interests)
-                            {
-                                <li><i class="fas <i class="far fa-check-circle"></i><br> @hobby.name</li>
+                            @if(BasicInfo.interests!=null){
+                              foreach (var hobby in BasicInfo.interests)
+                              {
+                                <li><i class="fas fa-bullseye"></i><br>@hobby.name</li>
+                              }
                             }
                         </ul>
                     </div>

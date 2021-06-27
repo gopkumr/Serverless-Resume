@@ -629,3 +629,7 @@ D:\Projects\Azure\ResumeApp\src\frontend\bin\Debug\net5.0\wwwroot\_framework\cor
 D:\Projects\Azure\ResumeApp\src\frontend\bin\Debug\net5.0\wwwroot\_framework\core.dll
 D:\Projects\Azure\ResumeApp\src\frontend\bin\Debug\net5.0\wwwroot\_framework\core.pdb
 D:\Projects\Azure\ResumeApp\src\frontend\obj\Debug\net5.0\build-gz\KIqWL+Vw.gz
+D:\Projects\Azure\ResumeApp\src\frontend\obj\Debug\net5.0\RazorDeclaration\Pages\WorkExp.razor.g.cs
+D:\Projects\Azure\ResumeApp\src\frontend\obj\Debug\net5.0\Razor\Pages\WorkExp.razor.g.cs
+D:\Projects\Azure\ResumeApp\src\frontend\obj\Debug\net5.0\RazorDeclaration\Pages\Education.razor.g.cs
+D:\Projects\Azure\ResumeApp\src\frontend\obj\Debug\net5.0\Razor\Pages\Education.razor.g.cs

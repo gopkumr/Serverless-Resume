@@ -1,0 +1,22 @@
+@using ResumeApp.Core.Model;
+
+<div class="work-exp">
+			<h6>@WorkInfo.position 
+				<span>@WorkInfo.startDate - @if(!string.IsNullOrEmpty(WorkInfo.endDate)){<span class="ml-1">@WorkInfo.endDate</span>}else {<span class="ml-1">Current</span>}</span>
+			</h6>
+			<i>@WorkInfo.name, @WorkInfo.location</i>
+			<ul>
+                @foreach (var summary in WorkInfo.summary)
+                {
+                    <li>
+					    <i class="far fa-hand-point-right"></i> @summary
+				    </li>
+                }
+			</ul>
+</div>
+
+@code{
+
+    [Parameter]
+    public Work WorkInfo{get;set;}
+}

@@ -27,6 +27,7 @@ public class Resume
         public string username { get; set; }
         public string url { get; set; }
         public string network { get; set; }
+        public string icon{get;set;}
     }
 
     public class Basics

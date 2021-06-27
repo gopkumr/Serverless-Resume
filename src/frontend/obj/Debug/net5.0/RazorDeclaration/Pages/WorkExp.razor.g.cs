@@ -83,13 +83,13 @@ using frontend.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "D:\Projects\Azure\ResumeApp\src\frontend\Pages\LeftPane.razor"
+#line 1 "D:\Projects\Azure\ResumeApp\src\frontend\Pages\WorkExp.razor"
 using ResumeApp.Core.Model;
 
 #line default
 #line hidden
 #nullable disable
-    public partial class LeftPane : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class WorkExp : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -97,12 +97,11 @@ using ResumeApp.Core.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 54 "D:\Projects\Azure\ResumeApp\src\frontend\Pages\LeftPane.razor"
+#line 18 "D:\Projects\Azure\ResumeApp\src\frontend\Pages\WorkExp.razor"
       
 
-[Parameter]
-public Basics BasicInfo  {get;set;}
-
+    [Parameter]
+    public Work WorkInfo{get;set;}
 
 #line default
 #line hidden

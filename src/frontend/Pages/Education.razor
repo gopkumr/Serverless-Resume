@@ -1,0 +1,10 @@
+@using ResumeApp.Core.Model;
+
+<span>@EducationInfo.startDate - @EducationInfo.endDate</span>
+<br>
+@EducationInfo.studyType - @EducationInfo.institution, @EducationInfo.area
+
+@code{
+    [Parameter]
+    public ResumeApp.Core.Model.Education EducationInfo{get;set;}
+}
