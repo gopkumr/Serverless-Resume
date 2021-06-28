@@ -112,7 +112,7 @@ using System.Text.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 13 "D:\Projects\Azure\ResumeApp\src\frontend\Pages\Index.razor"
+#line 15 "D:\Projects\Azure\ResumeApp\src\frontend\Pages\Index.razor"
       
 
 Resume ResumeModel {get;set;}

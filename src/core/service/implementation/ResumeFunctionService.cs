@@ -19,7 +19,7 @@ public class ResumeFunctionService:IResumeService{
         var responseMessage= await httpClient.GetAsync(apiUrl);
         if(responseMessage.IsSuccessStatusCode)
         {
-         resume = await responseMessage.Content.ReadFromJsonAsync<Resume>();
+          resume = await responseMessage.Content.ReadFromJsonAsync<Resume>();
         }
 
         return resume;

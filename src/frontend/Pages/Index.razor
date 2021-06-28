@@ -6,8 +6,10 @@
 @inject IResumeService ResumeService;
 
  <div class="row">
-     <LeftPane BasicInfo="@ResumeModel.basics"/>
-     <RightPane ResumeInfo="@ResumeModel"/>
+     @if(ResumeModel!=null){
+        <LeftPane BasicInfo="@ResumeModel.basics"/>
+        <RightPane ResumeInfo="@ResumeModel"/>
+     }
  </div>
 
 @code{
