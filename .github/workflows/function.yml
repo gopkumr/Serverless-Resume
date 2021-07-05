@@ -2,8 +2,6 @@ name: Deploy function app
 
 on: 
   push: 
-   paths: 
-     - ./src/backend/**
    branches:
      - master
    
