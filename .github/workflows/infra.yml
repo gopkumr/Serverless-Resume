@@ -1,0 +1,22 @@
+on: [workflow_run]
+name: Deploy ARM
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout code
+    - uses: actions/checkout@master
+
+      # Log into Azure
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Deploy ARM template
+    - name: Run Resumeapp ARM deploy
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTIONID }}
+        resourceGroupName: ${{ secrets.AZURE_RESOURCEGROUP }}
+        template: ../infra/resumeapp-infra.json
