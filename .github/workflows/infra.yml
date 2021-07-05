@@ -19,4 +19,4 @@ jobs:
       with:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTIONID }}
         resourceGroupName: ${{ secrets.AZURE_RESOURCEGROUP }}
-        template: ../infra/resumeapp-infra.json
+        template: ./infra/resumeapp-infra.json
