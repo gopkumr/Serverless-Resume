@@ -1,0 +1,36 @@
+name: Deploy frontend app
+on:
+    push:
+        branches: [ master ]
+env:
+  AZURE_STORAGE_ACCOUNTNAME: le22staticApp  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:            
+    - uses: actions/checkout@v2
+    - uses: azure/login@v1
+      with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1
+
+    - name: Publish Blazor Core Project
+      run: dotnet publish ./frontend/frontend.csproj -c Release -o output --nologo
+
+    - name: Upload to static app to storage
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.0.72
+        inlineScript: |
+            az storage blob upload-batch --account-name ${{ env.AZURE_STORAGE_ACCOUNTNAME }} -d '$web' -s output
+
+  # Azure logout 
+    - name: logout
+      run: |
+            az logout
+      if: always()

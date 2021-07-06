@@ -118,7 +118,9 @@ using System.Text.Json;
 Resume ResumeModel {get;set;}
 
 protected override async Task OnInitializedAsync(){
+    Console.WriteLine("Start");
     ResumeModel = await ResumeService.GetResumeAsync();
+    Console.WriteLine("End");
 }
 
 

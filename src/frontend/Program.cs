@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using ResumeApp.Core.Service.Interface;
 using ResumeApp.Core.Service.Implementation;
 
+
 namespace frontend
 {
     public class Program
@@ -18,10 +19,12 @@ namespace frontend
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("#app");
-
+            
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            var apiUrl=builder.Configuration.GetValue<string>("api_baseurl");
+            
             builder.Services.AddSingleton<IResumeService>((sp)=>{
-                return new ResumeFunctionService(new HttpClient(){ BaseAddress=new Uri("http://localhost:7071/")});
+                return new ResumeFunctionService(new HttpClient(){ BaseAddress=new Uri(apiUrl)});
             });
             await builder.Build().RunAsync();
         }
