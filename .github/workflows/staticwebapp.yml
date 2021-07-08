@@ -29,9 +29,9 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: 'upload'
           ###### Repository/Build Configurations
-          app_location: 'output'
+          app_location: './src/frontend/'
           api_location: 'api'
-          output_location: 'output'
+          output_location: './output'
           ###### End of Repository/Build Configurations ######
 
   # Azure logout 
