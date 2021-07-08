@@ -7,7 +7,7 @@ using ResumeApp.Core.Model;
 namespace ResumeApp.Core.Service.Implementation{
 public class ResumeFunctionService:IResumeService{
     private readonly HttpClient httpClient;
-    private string apiUrl="/api/resume";
+    private string apiUrl="";
 
     public ResumeFunctionService(HttpClient httpClient)
     {
