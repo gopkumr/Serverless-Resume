@@ -23,7 +23,7 @@ jobs:
           ###### Repository/Build Configurations
           app_location: './src/frontend/'
           api_location: 'api'
-          output_location: '/bin/staticsites/ss-oryx/app/'
+          output_location: 'wwwroot'
           ###### End of Repository/Build Configurations ######
 
   # Azure logout 
