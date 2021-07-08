@@ -23,6 +23,7 @@ jobs:
           ###### Repository/Build Configurations
           app_location: './src/frontend/'
           api_location: 'api'
+          output_location: './output'
           ###### End of Repository/Build Configurations ######
 
   # Azure logout 
